@@ -28,12 +28,7 @@ namespace pz_5_rpm
             Console.WriteLine("Введите год выпуска товара:");
             int productYear = int.Parse(Console.ReadLine());
 
-            Product product = new Product()
-            {
-                name = productName,
-                price = productPrice,
-                year = productYear
-            };
+            Product product = new Product(productName, productPrice, productYear);
 
             Console.WriteLine($"Товар был выпущен {product.WhenReleased()} лет назад.");
 
